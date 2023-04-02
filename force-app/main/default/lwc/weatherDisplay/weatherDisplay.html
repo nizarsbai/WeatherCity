@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Weather Information">
+        <div class="slds-m-around_medium">
+            <lightning-input label="City Name" onchange={handleCityChange}></lightning-input>
+            <template if:true={weatherData}>
+                <div class="slds-text-heading_medium">{cityName}</div>
+                <div class="slds-text-title">{weather}</div>
+                <div class="slds-text-title">{temperature}&deg;C</div>
+            </template>
+            <template if:false={weatherData}>
+                <div class="slds-text-heading_medium">No City Selected</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

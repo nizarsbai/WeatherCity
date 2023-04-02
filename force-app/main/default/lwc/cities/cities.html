@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="City Picklist">
+        <div class="slds-m-around_medium">
+            <template if:true={picklistValues}>
+                <lightning-combobox label="Select a City" options={picklistValues} value={selectedCity} onchange={handleCityChange}></lightning-combobox>
+            </template>
+            <template if:false={picklistValues}>
+                <div>No cities available</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
